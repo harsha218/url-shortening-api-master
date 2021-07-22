@@ -1,0 +1,448 @@
+$Cyan: hsl(180, 66%, 49%);
+$DarkViolet: hsl(257, 27%, 26%);
+
+$Red: hsl(0, 87%, 67%);
+
+$Gray: hsl(0, 0%, 75%);
+$GrayishViolet: hsl(257, 7%, 63%);
+$VeryDarkBlue: hsl(255, 11%, 22%);
+$VeryDarkViolet: hsl(260, 8%, 14%);
+
+$SiteMargin: 8%;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.navContainer {
+    margin-inline: $SiteMargin;
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+
+    .special {
+        background-color: $Cyan;
+        padding-inline: 1rem !important;
+        margin-inline: 1rem !important;
+        border-radius: 30px;
+        color: white !important ;
+        cursor: pointer;
+        height: 2.5rem;
+        transition: 150ms ease-in;
+        min-width: max-content;
+        font-weight: bold;
+
+        &:hover {
+            background-color: hsl(180, 66%, 70%);
+        }
+    }
+}
+
+.bannerSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-block: 3rem;
+    margin-left: $SiteMargin;
+    overflow: hidden;
+
+    .banner {
+        flex-basis: 40%;
+        h1 {
+            font-weight: bold;
+            font-size: 4.5rem;
+            line-height: 4.5rem;
+            padding-bottom: 10px;
+        }
+        p {
+            color: $GrayishViolet;
+            font-size: 1.2rem;
+            padding-bottom: 1rem;
+        }
+        .button {
+            font-size: 1.4rem;
+            padding: 10px 25px;
+            background-color: $Cyan;
+            border-radius: 30px;
+            color: white;
+            cursor: pointer;
+            transition: 150ms ease-in;
+            font-weight: bold;
+
+            &:hover {
+                background-color: hsl(180, 66%, 70%);
+            }
+        }
+    }
+
+    img {
+        flex-basis: 60%;
+        margin-right: -$SiteMargin - 2;
+        width: 100%;
+    }
+}
+
+.shortenSection {
+    padding-inline: $SiteMargin;
+    padding-block: 3rem 1rem;
+    background-color: #eff1f7;
+
+    .formContainer {
+        background-image: url("./images/bg-shorten-desktop.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: $DarkViolet;
+        text-align: center;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1.5rem;
+        border-radius: 10px;
+
+        .inputContainer {
+            position: relative;
+            flex-basis: 80%;
+
+            input {
+                border-radius: 10px;
+                padding-left: 15px;
+                height: 3.5rem;
+                width: 100%;
+            }
+
+            #errorMsg {
+                display: none;
+                position: absolute;
+                color: red;
+                text-align: left;
+                padding: 10px;
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+        }
+
+        .button {
+            font-size: 1.4rem;
+            padding: 10px 25px;
+            background-color: $Cyan;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            height: 3.5rem;
+            transition: 150ms ease-in;
+            min-width: max-content;
+
+            &:hover {
+                background-color: hsl(180, 66%, 70%);
+            }
+        }
+
+        .button.disabled {
+            cursor: not-allowed;
+            background-color: $GrayishViolet;
+        }
+    }
+    .outputContainer {
+        max-height: 400px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+
+        .output {
+            padding: 1rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 6px;
+
+            .right {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 10px;
+
+                .button {
+                    padding: 7px 25px;
+                    background-color: $Cyan;
+                    border-radius: 10px;
+                    color: white;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: 150ms ease-in;
+                    min-width: max-content;
+
+                    &:hover {
+                        background-color: hsl(180, 66%, 70%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.statisticsSection {
+    text-align: center;
+    padding-inline: $SiteMargin;
+    background-color: hsl(225, 33.3%, 95.3%);
+    padding-block: 2.5rem;
+
+    h2 {
+        font-weight: bold;
+    }
+
+    p {
+        color: $GrayishViolet;
+        padding-bottom: 1rem;
+    }
+
+    .cardsContainer {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        min-height: 440px;
+        position: relative;
+
+        .backBar {
+            position: absolute;
+            top: 50%;
+            height: 0.5rem;
+            width: 100%;
+            background-color: $Cyan;
+            transition: 0ms ease-in-out;
+        }
+
+        .customCard {
+            position: relative;
+            background-color: white;
+            padding: 5rem 3rem;
+            text-align: left;
+            border-radius: 7px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+            .imgContainer {
+                position: absolute;
+                top: -12%;
+                left: 10%;
+                padding: 1rem;
+                border-radius: 50%;
+                background-color: $VeryDarkViolet;
+            }
+        }
+
+        .c1 {
+            align-self: flex-start;
+        }
+
+        .c2 {
+            align-self: center;
+        }
+
+        .c3 {
+            align-self: flex-end;
+        }
+    }
+}
+
+.boostSection {
+    text-align: center;
+    background-image: url(./images/bg-boost-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $DarkViolet;
+
+    padding: 3rem;
+
+    h1 {
+        font-weight: bold;
+        color: white;
+        margin-bottom: 2.4rem;
+    }
+    .button {
+        font-size: 1.4rem;
+        padding: 10px 25px;
+        background-color: $Cyan;
+        border-radius: 30px;
+        color: white;
+        cursor: pointer;
+        transition: 150ms ease-in;
+
+        &:hover {
+            background-color: hsl(180, 66%, 70%);
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    align-items: baseline;
+    padding-block: 2rem 4rem;
+    padding-inline: $SiteMargin;
+    justify-content: space-between;
+    color: white;
+    background-color: $VeryDarkViolet;
+
+    h2 {
+        flex-basis: 15%;
+        font-weight: bold;
+    }
+
+    .listGroup {
+        text-align: left;
+
+        h5 {
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 0.6rem;
+            cursor: pointer;
+
+            &:hover {
+                color: $Cyan;
+            }
+        }
+    }
+
+    .iconGroup {
+        img {
+            margin-inline: 7px;
+            cursor: pointer;
+
+            &:hover {
+                filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .banner {
+        h1 {
+            font-size: 3rem !important;
+            line-height: 3rem !important;
+        }
+    }
+
+    .cardsContainer {
+        flex-direction: column;
+        gap: 60px !important;
+
+        .backBar {
+            transform: rotate(90deg);
+            width: 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .bannerSection {
+        flex-direction: column-reverse;
+
+        .banner {
+            margin-right: $SiteMargin;
+        }
+    }
+
+    .shortenSection {
+        .formContainer {
+            flex-direction: column;
+
+            .inputContainer {
+                width: 100%;
+            }
+            .button {
+                width: 100%;
+            }
+        }
+
+        .outputContainer {
+            .output {
+                flex-direction: column;
+
+                .left {
+                    border-bottom: 1px solid #d5dcef;
+                    width: 100%;
+                    text-align: center;
+                    padding-bottom: 10px;
+                }
+                .right {
+                    flex-direction: column;
+                    padding-top: 10px;
+                    width: 100%;
+                    text-align: center;
+
+                    .button {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+    .boostSection {
+        background-image: url("./images/bg-boost-mobile.svg");
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center !important;
+        gap: 1.8rem;
+
+        .listGroup {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .backBar {
+        left: -50%;
+        width: 200% !important;
+    }
+}
+
+.navbar-nav .nav-link {
+    text-align: center;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem !important;
+}
+
+.navbar-nav {
+    align-items: center !important;
+}
+
+.navbar-collapse.collapse.show,
+.navbar-collapse.collapsing {
+    background-color: $VeryDarkBlue;
+    border-radius: 10px;
+    padding-block: 1rem 1.5rem;
+    padding-inline: 15%;
+    li {
+        width: 100%;
+        padding-bottom: 0.2rem;
+    }
+    a {
+        color: white;
+
+        &:hover:not(.special) {
+            color: $Cyan;
+        }
+    }
+}
