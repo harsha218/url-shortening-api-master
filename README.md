@@ -5,6 +5,7 @@
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
+Please find the deployed site at https://harsha218.github.io/url-shortening-api-master/
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
